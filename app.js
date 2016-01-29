@@ -11,15 +11,15 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port);
 });
-var redis = require("redis");
+//var redis = require("redis");
 
 // Add your cache name and access key.
-var client = redis.createClient(6379,'iacredis.redis.cache.windows.net', {auth_pass: 'o5f1Taf2OjBQFJJASkLk5UCIjp0rBtoIDDYz6300fBY=' });
+//var client = redis.createClient(6379,'iacredis.redis.cache.windows.net', {auth_pass: 'o5f1Taf2OjBQFJJASkLk5UCIjp0rBtoIDDYz6300fBY=' });
 
-client.set("foo", "bar", function(err, reply) {
-    console.log(reply);
-});
+//client.set("foo", "bar", function(err, reply) {
+ //   console.log(reply);
+//});
 
-client.get("foo",  function(err, reply) {
-    console.log(reply);
-});
+//client.get("foo",  function(err, reply) {
+  //  console.log(reply);
+//});
