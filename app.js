@@ -11,6 +11,9 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port);
 });
+
+module.exports = app;
+
 //var redis = require("redis");
 
 // Add your cache name and access key.
