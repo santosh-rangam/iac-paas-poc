@@ -1,0 +1,195 @@
+    <!doctype html>
+    <html lang="en" ng-app="myApp">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        
+        
+      <title>Parts Catalog</title>
+
+<!-- Angular -->
+    <script src = "lib/angular/angular.min.js"></script>
+
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="css/parts.css">
+        
+        
+      <script src="lib/angular/angular.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+      <script src="js/controller/parts.js"></script>
+         <script src="js/parts.js"></script>
+      
+         
+        
+          <style type="text/css">  
+        
+    ul.dropdown-cart{
+    min-width:250px;
+}
+ul.dropdown-cart li .item{
+    display:block;
+    padding:3px 10px;
+    margin: 3px 0;
+}
+ul.dropdown-cart li .item:hover{
+    background-color:#f3f3f3;
+}
+ul.dropdown-cart li .item:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+ul.dropdown-cart li .item-left{
+    float:left;
+}
+ul.dropdown-cart li .item-left img,
+ul.dropdown-cart li .item-left span.item-info{
+    float:left;
+}
+ul.dropdown-cart li .item-left span.item-info{
+    margin-left:10px;   
+}
+ul.dropdown-cart li .item-left span.item-info span{
+    display:block;
+}
+ul.dropdown-cart li .item-right{
+    float:right;
+}
+ul.dropdown-cart li .item-right button{
+    margin-top:14px;
+}
+    </style>
+        
+        
+    </head>
+    <body >
+        
+            <!-- Navigation -->
+  <ng-include src="'views/partials/navbarParts.html'"></ng-include>
+
+    <!--
+    <div class="main" ng-controller = "MyController">
+      <ul class="artistlist">
+        <li class="artist cf" ng-repeat="item in options">
+          <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+          <div class="info">
+            <h2>{{item.partNo}}</h2>
+            <h3>{{item.description}}</h3>
+            <h3>{{item.required}}</h3>
+              <h3>{{item.remarks}}</h3>
+              <h3>{{item.nonSaleInd}}</h3>
+              <h3>{{item.subParts}}</h3>
+              <h3>{{item.leaf}}</h3>          
+          </div>
+        </li>
+      </ul>
+    </div>
+    -->
+
+<!--
+        <h2>Option View</h2>
+      <p>The option view parts details.</p>  
+-->
+        <div class="row" ng-controller = "MyController">
+        <div class="container" >
+            <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Parts Catalog
+<!--                    <small>Subheading</small>-->
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Parts Catalog</li>
+                </ol>
+            </div>
+        </div>
+            
+        
+            
+            
+            
+            
+            <div class="panel panel-primary filterable">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Users</h3>
+                    <div class="pull-right">
+                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                    </div>
+                </div>
+                
+                
+
+                
+               
+
+      <table class="table table-hover">
+        <thead>
+          <tr class = "filters">
+              <th ><input type="text" class="form-control" placeholder="View" disabled></th>
+            <th><input type="text" class="form-control" placeholder="Parts No." disabled></th>
+            <th><input type="text" class="form-control" placeholder="Description" disabled></th>
+            <th><input type="text" class="form-control" placeholder="Required" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Remarks" disabled></th>
+<!--
+              <th><input type="text" class="form-control" placeholder="NonSaleInd" disabled></th>
+              <th><input type="text" class="form-control" placeholder="SubParts" disabled></th>
+              <th><input type="text" class="form-control" placeholder="Leaf" disabled></th>
+-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in options">
+              <td><img ng-src="img/{{item.partNo}}.png" alt="Photo of {{item.description}}"></td>
+            <td>{{item.partNo}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.required}}</td>
+             <td>{{item.remarks}}<td>
+		<td><a href="http://143.222.33.39:4000/shoppingCart.html" class="btn btn-primary btn-mini"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a><td>
+
+
+<!--
+            <td>{{item.nonSaleInd}}<td>
+             <td>{{item.subParts}}<td>
+             <td>{{item.leaf}}<td>
+-->
+          </tr>
+            
+            
+            
+            
+            
+
+        </tbody>
+      </table>
+    </div>
+            </div>
+            </div>
+    </body>
+    </html>
+<footer>
+<div class="row">
+<div class="col-lg-12">
+<p>Copyright © Cummins 2015</p>
+</div>
+</div>
+</footer>

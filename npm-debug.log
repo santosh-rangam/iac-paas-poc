@@ -1,0 +1,58 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'redis' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'redis', null ]
+5 verbose cache add name=undefined spec="redis" args=["redis",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'redis',
+6 verbose parsed url   path: 'redis',
+6 verbose parsed url   href: 'redis' }
+7 silly lockFile b840fc02-redis redis
+8 verbose lock redis /root/.npm/b840fc02-redis.lock
+9 silly lockFile b840fc02-redis redis
+10 silly lockFile b840fc02-redis redis
+11 verbose addNamed [ 'redis', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile fb3bbc27-redis redis@
+14 verbose lock redis@ /root/.npm/fb3bbc27-redis.lock
+15 silly addNameRange { name: 'redis', range: '*', hasData: false }
+16 verbose url raw redis
+17 verbose url resolving [ 'https://registry.npmjs.org/', './redis' ]
+18 verbose url resolved https://registry.npmjs.org/redis
+19 info trying registry request attempt 1 at 06:06:59
+20 http GET https://registry.npmjs.org/redis
+21 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect EHOSTUNREACH
+22 info trying registry request attempt 2 at 06:07:11
+23 http GET https://registry.npmjs.org/redis
+24 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect EHOSTUNREACH
+25 info trying registry request attempt 3 at 06:08:15
+26 http GET https://registry.npmjs.org/redis
+27 silly lockFile fb3bbc27-redis redis@
+28 silly lockFile fb3bbc27-redis redis@
+29 error network tunneling socket could not be established, cause=connect EHOSTUNREACH
+29 error network This is most likely not a problem with npm itself
+29 error network and is related to network connectivity.
+29 error network In most cases you are behind a proxy or have bad network settings.
+29 error network
+29 error network If you are behind a proxy, please make sure that the
+29 error network 'proxy' config is set properly.  See: 'npm help config'
+30 error System Linux 3.10.0-123.el7.x86_64
+31 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "redis"
+32 error cwd /opt/node-v0.10.26/iac
+33 error node -v v0.10.26
+34 error npm -v 1.4.3
+35 error code ECONNRESET
+36 verbose exit [ 1, true ]

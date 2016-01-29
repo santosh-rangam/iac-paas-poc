@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Genuine Part Business</title>
+
+<!-- Angular -->
+    <script src = "lib/angular/angular.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+   <!-- Angular -->
+    <script src = "lib/angular/angular.min.js"></script>
+
+    
+    <style type="text/css">   
+
+.navbar-inner {
+    background-color: #B61020;
+/*    background-image: linear-gradient(to bottom, blue, green);*/
+    background-repeat: repeat-x;
+/*    border: 1px solid yellow;*/
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: red;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    float: left;
+    left: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+.btn-group.open .btn.dropdown-toggle {
+  background-color: red;
+}
+
+.btn-group.open .btn.dropdown-toggle {
+  background-color:lime;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  color:white;
+  background-color:Teal;
+}
+
+.navbar .nav > li > a {
+    color: white;
+    float: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-shadow: 0 0px 0 #ffffff;
+}
+
+.navbar .brand {
+  display: block;
+  float: left;
+  padding: 10px 20px 10px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  text-shadow: 0 0px 0 #ffffff;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar-text {
+  margin-bottom: 0;
+  line-height: 40px;
+  color: white;
+}
+
+.dropdown-menu li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 20px;
+  color: white;
+  white-space: nowrap;
+}
+
+.navbar-link {
+  color: white;
+}
+
+.navbar-link:hover {
+  color: white;
+}
+
+</style>
+
+    
+</head>
+
+<body>
+
+    <ng-include src="'views/partials/navbar.html'"></ng-include>
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Contact
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Contact</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-md-8">
+                <!-- Embedded Google Map -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-md-4">
+                <h3>Contact Details</h3>
+                <p>
+                    701 Jackson Street<br>Columbus, IN 47201<br>
+                </p>
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">cummins@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i> 
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Send us a Message</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Full Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Message:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Cummins 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+   
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!--
+
+<div class = "container">
+    <img src = "img/easy-pie-maintenance-mode.jpg"></img>
+        <h1> The Page is under Maintenance </h1>
+</div>
+-->
+
+
+        <!doctype html>
+        <html lang="en" ng-app="myApp">
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+          <title>Parts Catalog</title>
+
+            <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+            <link rel="stylesheet" href="css/parts.css">
+
+
+          <script src="lib/angular/angular.min.js"></script>
+            <script src="js/jquery.min.js"></script>
+          <script src="js/controller/ship.js"></script>
+             <script src="js/parts.js"></script>
+
+              <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+              <style type="text/css">  
+
+        ul.dropdown-cart{
+        min-width:250px;
+    }
+    ul.dropdown-cart li .item{
+        display:block;
+        padding:3px 10px;
+        margin: 3px 0;
+    }
+    ul.dropdown-cart li .item:hover{
+        background-color:#f3f3f3;
+    }
+    ul.dropdown-cart li .item:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    ul.dropdown-cart li .item-left{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left img,
+    ul.dropdown-cart li .item-left span.item-info{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left span.item-info{
+        margin-left:10px;   
+    }
+    ul.dropdown-cart li .item-left span.item-info span{
+        display:block;
+    }
+    ul.dropdown-cart li .item-right{
+        float:right;
+    }
+    ul.dropdown-cart li .item-right button{
+        margin-top:14px;
+    }
+                  
+                  .invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
+        </style>
+
+
+        </head>
+        <body>
+
+                <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Genuine Part Business</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                         <li>
+                            <a href="contact.html">Shopping Cart</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="full-width.html">Signup</a>
+                                </li>
+                                <li>
+                                    <a href="sidebar.html">My A/c</a>
+                                </li>
+                                <li>
+                            <a href="contact.html">Admin</a>
+                        </li>
+                                <li>
+                                    <a href="faq.html">My Order</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">My Engine</a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">My Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <!--        cart count             -->
+
+                         <li class="dropdown" ng-controller = "MyController">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span> 5 - Items<span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-cart" role="menu">
+                  <li ng-repeat="item in options">
+                      <span class="item">
+                        <span class="item-left">
+    <!--                        <img src="http://lorempixel.com/50/50/" alt="" />-->
+                            <img ng-src="img/{{item.partNo}}.png" height = "50px" width = "50px" alt="Photo of {{item.description}}">
+                            <span class="item-info">
+                                <span>{{item.partNo}}</span>
+    <!--                            <span>{{item.description}}</span>-->
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                    </span>
+                  </li>
+    <!--
+                  <li>
+                      <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                                <span>23$</span>
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                    </span>
+                  </li>
+    -->
+                   <li class="divider"></li>
+                  <li><a class="text-center" href="shoppingCart.html">View Cart</a></li>
+              </ul>
+            </li>
+
+
+    <!--                    -->
+
+
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!--
+        <div class="main" ng-controller = "MyController">
+          <ul class="artistlist">
+            <li class="artist cf" ng-repeat="item in options">
+              <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+              <div class="info">
+                <h2>{{item.partNo}}</h2>
+                <h3>{{item.description}}</h3>
+                <h3>{{item.required}}</h3>
+                  <h3>{{item.remarks}}</h3>
+                  <h3>{{item.nonSaleInd}}</h3>
+                  <h3>{{item.subParts}}</h3>
+                  <h3>{{item.leaf}}</h3>          
+              </div>
+            </li>
+          </ul>
+        </div>
+        -->
+
+    <!--
+            <h2>Option View</h2>
+          <p>The option view parts details.</p>  
+    -->
+          <div class="container">
+              <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Shopping Cart
+<!--                    <small>Subheading</small>-->
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="shoppingCart.html">Shopping Cart</a>
+                    </li>
+                    <li class="active">Invoice</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+              
+	  
+    
+	
+	    
+	
+		</div>   
+            
+<!--            invoice -->
+            
+            <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+    		<div class="invoice-title">
+    			<h2>Invoice</h2><h3 class="pull-right">Order # 12345</h3>
+    		</div>
+    		<hr>
+    		<div class="row">
+    			<div class="col-xs-6">
+    				<address>
+    				<strong>Billed To:</strong><br>
+    					Shahid Quraishi<br>
+    					1234 Main<br>
+    					Apt. 4B<br>
+    					Springfield, ST 54321
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right">
+    				<address>
+        			<strong>Shipped To:</strong><br>
+    					Shahid Quraishi<br>
+    					1234 Main<br>
+    					Apt. 4B<br>
+    					Springfield, ST 54321
+    				</address>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-xs-6">
+    				<address>
+    					<strong>Payment Method:</strong><br>
+    					Visa ending **** 4242<br>
+    					shahidq@email.com
+    				</address>
+    			</div>
+    			<div class="col-xs-6 text-right">
+    				<address>
+    					<strong>Order Date:</strong><br>
+    					March 7, 2014<br><br>
+    				</address>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default">
+    			<div class="panel-heading">
+    				<h3 class="panel-title"><strong>Order summary</strong></h3>
+    			</div>
+    			<div class="panel-body">
+    				<div class="table-responsive">
+    					<table class="table table-condensed">
+    						<thead>
+                                <tr>
+        							<td><strong>Item</strong></td>
+        							<td class="text-center"><strong>Price</strong></td>
+        							<td class="text-center"><strong>Quantity</strong></td>
+        							<td class="text-right"><strong>Totals</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+    							<!-- foreach ($order->lineItems as $line) or some such thing here -->
+    							<tr>
+    								<td>BS-200</td>
+    								<td class="text-center">$10.99</td>
+    								<td class="text-center">1</td>
+    								<td class="text-right">$10.99</td>
+    							</tr>
+                                <tr>
+        							<td>BS-400</td>
+    								<td class="text-center">$20.00</td>
+    								<td class="text-center">3</td>
+    								<td class="text-right">$60.00</td>
+    							</tr>
+                                <tr>
+            						<td>BS-1000</td>
+    								<td class="text-center">$600.00</td>
+    								<td class="text-center">1</td>
+    								<td class="text-right">$600.00</td>
+    							</tr>
+    							<tr>
+    								<td class="thick-line"></td>
+    								<td class="thick-line"></td>
+    								<td class="thick-line text-center"><strong>Subtotal</strong></td>
+    								<td class="thick-line text-right">$670.99</td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Shipping</strong></td>
+    								<td class="no-line text-right">$15</td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Total</strong></td>
+    								<td class="no-line text-right">$685.99</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+            
+<!--            invoice -->
+            
+            
+	<br/>

@@ -1,0 +1,13 @@
+
+
+.selectedNodeDisplay {
+  margin: 8px 0 8px 0;
+  width: 500px;  
+}
+
+.treeContainer {
+  border: 1px solid gray;
+  height: 400px;
+  overflow: auto;
+  width: 500px;
+}

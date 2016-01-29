@@ -1,0 +1,405 @@
+<!--
+
+<div class = "container">
+    <img src = "img/easy-pie-maintenance-mode.jpg"></img>
+        <h1> The Page is under Maintenance </h1>
+</div>
+-->
+
+
+        <!doctype html>
+        <html lang="en" ng-app="myApp">
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+          <title>Parts Catalog</title>
+
+            <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+            <link rel="stylesheet" href="css/parts.css">
+
+
+          <script src="lib/angular/angular.min.js"></script>
+            <script src="js/jquery.min.js"></script>
+          <script src="js/controller/parts.js"></script>
+             <script src="js/parts.js"></script>
+
+              <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+              <style type="text/css">  
+
+        ul.dropdown-cart{
+        min-width:250px;
+    }
+    ul.dropdown-cart li .item{
+        display:block;
+        padding:3px 10px;
+        margin: 3px 0;
+    }
+    ul.dropdown-cart li .item:hover{
+        background-color:#f3f3f3;
+    }
+    ul.dropdown-cart li .item:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    ul.dropdown-cart li .item-left{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left img,
+    ul.dropdown-cart li .item-left span.item-info{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left span.item-info{
+        margin-left:10px;   
+    }
+    ul.dropdown-cart li .item-left span.item-info span{
+        display:block;
+    }
+    ul.dropdown-cart li .item-right{
+        float:right;
+    }
+    ul.dropdown-cart li .item-right button{
+        margin-top:14px;
+    }
+        </style>
+
+
+        </head>
+        <body>
+
+                <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Genuine Part Business</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                         <li>
+                            <a href="contact.html">Shopping Cart</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="full-width.html">Signup</a>
+                                </li>
+                                <li>
+                                    <a href="sidebar.html">My A/c</a>
+                                </li>
+                                <li>
+                            <a href="contact.html">Admin</a>
+                        </li>
+                                <li>
+                                    <a href="faq.html">My Order</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">My Engine</a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">My Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <!--        cart count             -->
+
+                         <li class="dropdown" ng-controller = "MyController">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span> 5 - Items<span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-cart" role="menu">
+                  <li ng-repeat="item in options">
+                      <span class="item">
+                        <span class="item-left">
+    <!--                        <img src="http://lorempixel.com/50/50/" alt="" />-->
+                            <img ng-src="img/{{item.partNo}}.png" height = "50px" width = "50px" alt="Photo of {{item.description}}">
+                            <span class="item-info">
+                                <span>{{item.partNo}}</span>
+    <!--                            <span>{{item.description}}</span>-->
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                    </span>
+                  </li>
+    <!--
+                  <li>
+                      <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                                <span>23$</span>
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                    </span>
+                  </li>
+    -->
+                   <li class="divider"></li>
+                  <li><a class="text-center" href="shoppingCart.html">View Cart</a></li>
+              </ul>
+            </li>
+
+
+    <!--                    -->
+
+
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!--
+        <div class="main" ng-controller = "MyController">
+          <ul class="artistlist">
+            <li class="artist cf" ng-repeat="item in options">
+              <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+              <div class="info">
+                <h2>{{item.partNo}}</h2>
+                <h3>{{item.description}}</h3>
+                <h3>{{item.required}}</h3>
+                  <h3>{{item.remarks}}</h3>
+                  <h3>{{item.nonSaleInd}}</h3>
+                  <h3>{{item.subParts}}</h3>
+                  <h3>{{item.leaf}}</h3>          
+              </div>
+            </li>
+          </ul>
+        </div>
+        -->
+
+    <!--
+            <h2>Option View</h2>
+          <p>The option view parts details.</p>  
+    -->
+          <div class="container">
+              <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Products
+<!--                    <small>Subheading</small>-->
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="shoppingCart.html">Shopping Cart</a>
+                    </li>
+                    <li class="active">Shipping-Billing Info</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+              
+		<div class="container">
+			
+		  
+		  <legend   data-toggle="collapse" class="" data-target="#demo">Shipment Information</legend>
+		  
+		
+		  <div id="demo" class="collapse in">
+					<div class="row">
+					<div class="col-sm-12 col-md-10 col-md-offset-1">
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">Contact Name:</label>
+							<div class="col-sm-7">
+							  <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Contact Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">Address Line 1:</label>
+							<div class="col-sm-7">
+							  <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Address Line 1">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">Address Line 2:</label>
+							<div class="col-sm-7">
+							  <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Address Line 2">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">City:</label>
+							<div class="col-sm-7">
+							  <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="City">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">State:</label>
+							<div class="col-sm-7">
+							 
+							  <div class="row">
+						<div class="col-xs-5">
+						  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+							<option>State</option>
+							<option value="01">Arizona</option>
+							<option value="02">Alaska</option>
+							<option value="03">Arkansas</option>
+							<option value="04">California</option>
+							<option value="05">Colorado</option>
+							<option value="06">Connecticut</option>
+							<option value="07">Delaware</option>
+							<option value="08">Florida</option>
+							<option value="09">Georgia</option>
+							<option value="10">Hawaii</option>
+							<option value="11">Idaho</option>
+							<option value="12">Indiana</option>
+						  </select>
+						</div>
+					  </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">Country:</label>
+							<div class="col-sm-7">
+							 
+							  <div class="row">
+						<div class="col-xs-5">
+						  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+							<option>Country</option>
+							<option value="01">United States</option>
+							<option value="02">Canada</option>
+						  </select>
+						</div>
+					  </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="card-holder-name">Zipcode:</label>
+							<div class="col-sm-5">
+							  <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Zipcode">
+							</div>
+						</div>
+						<button type="button" class="btn btn-default" id="btn_click">
+									<span class="glyphicon glyphicon-shopping-cart"></span> Continue to Billing
+								</button>   
+					</div>
+				</div>
+		  </div>
+		</div>    
+    
+	
+	    
+	<div class="container">
+		  <legend   data-toggle="collapse" data-target="#demo1">Billing Information</legend>
+		  <div id="demo1" class="collapse">	
+	<div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+	
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="card-number">Card Number</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-xs-3">
+              <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                <option>Month</option>
+                <option value="01">Jan (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Apr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">June (06)</option>
+                <option value="07">July (07)</option>
+                <option value="08">Aug (08)</option>
+                <option value="09">Sep (09)</option>
+                <option value="10">Oct (10)</option>
+                <option value="11">Nov (11)</option>
+                <option value="12">Dec (12)</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control" name="expiry-year">
+                <option value="13">2013</option>
+                <option value="14">2014</option>
+                <option value="15">2015</option>
+                <option value="16">2016</option>
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+        </div>
+      </div>
+      <div class="form-group">
+	<!-- <a type="button" class="btn btn-default" href="http://143.222.33.39:4000/partsystems.html">
+									<span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+								</a> -->
+								<a type="button" class="btn btn-success" href = "http://143.222.33.39:4000/shipment.html">
+									Checkout <span class="glyphicon glyphicon-play"></span>
+								</a>
+	
+		</div>
+
+		
+								
+	</div>
+    </div>
+</div>
+		  </div>
+		</div>   
+	<br/>

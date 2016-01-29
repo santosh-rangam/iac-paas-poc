@@ -1,0 +1,123 @@
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Genuine Part Business</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                     <li>
+                        <a href="contact.html">Shopping Cart</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                            </li>
+                            <li>
+                                <a href="sidebar.html">My A/c</a>
+                            </li>
+                            <li>
+                        <a href="contact.html">Admin</a>
+                    </li>
+                            <li>
+                                <a href="faq.html">My Order</a>
+                            </li>
+                            <li>
+                                <a href="404.html">My Engine</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">My Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                    
+                    <!--        cart count             -->
+                    
+                     <li class="dropdown" ng-controller = "MyController">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span> 5 - Items<span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-cart" role="menu">
+              <li ng-repeat="item in options">
+                  <span class="item">
+                    <span class="item-left">
+<!--                        <img src="http://lorempixel.com/50/50/" alt="" />-->
+                        <img ng-src="img/{{item.partNo}}.png" height = "50px" width = "50px" alt="Photo of {{item.description}}">
+                        <span class="item-info">
+                            <span>{{item.partNo}}</span>
+<!--                            <span>{{item.description}}</span>-->
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                    </span>
+                </span>
+              </li>
+<!--
+              <li>
+                  <span class="item">
+                    <span class="item-left">
+                        <img src="http://lorempixel.com/50/50/" alt="" />
+                        <span class="item-info">
+                            <span>Item name</span>
+                            <span>23$</span>
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                    </span>
+                </span>
+              </li>
+-->
+               <li class="divider"></li>
+              <li><a class="text-center" href="">View Cart</a></li>
+          </ul>
+        </li>
+                    
+                    
+<!--                    -->
+                    
+                    
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+    </nav>

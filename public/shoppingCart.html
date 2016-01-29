@@ -1,0 +1,340 @@
+<!--
+
+<div class = "container">
+    <img src = "img/easy-pie-maintenance-mode.jpg"></img>
+        <h1> The Page is under Maintenance </h1>
+</div>
+-->
+
+
+        <!doctype html>
+        <html lang="en" ng-app="myApp">
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+
+          <title>Parts Catalog</title>
+
+            <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+            <link rel="stylesheet" href="css/parts.css">
+
+
+          <script src="lib/angular/angular.min.js"></script>
+            <script src="js/jquery.min.js"></script>
+          <script src="js/controller/parts.js"></script>
+             <script src="js/parts.js"></script>
+
+              <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+              <style type="text/css">  
+
+        ul.dropdown-cart{
+        min-width:250px;
+    }
+    ul.dropdown-cart li .item{
+        display:block;
+        padding:3px 10px;
+        margin: 3px 0;
+    }
+    ul.dropdown-cart li .item:hover{
+        background-color:#f3f3f3;
+    }
+    ul.dropdown-cart li .item:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    ul.dropdown-cart li .item-left{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left img,
+    ul.dropdown-cart li .item-left span.item-info{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left span.item-info{
+        margin-left:10px;   
+    }
+    ul.dropdown-cart li .item-left span.item-info span{
+        display:block;
+    }
+    ul.dropdown-cart li .item-right{
+        float:right;
+    }
+    ul.dropdown-cart li .item-right button{
+        margin-top:14px;
+    }
+        </style>
+
+
+        </head>
+        <body>
+
+                <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Genuine Part Business</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                         <li>
+                            <a href="contact.html">Shopping Cart</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="full-width.html">Signup</a>
+                                </li>
+                                <li>
+                                    <a href="sidebar.html">My A/c</a>
+                                </li>
+                                <li>
+                            <a href="contact.html">Admin</a>
+                        </li>
+                                <li>
+                                    <a href="faq.html">My Order</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">My Engine</a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">My Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <!--        cart count             -->
+
+                         <li class="dropdown" ng-controller = "MyController">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span> 5 - Items<span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-cart" role="menu">
+                  <li ng-repeat="item in options">
+                      <span class="item">
+                        <span class="item-left">
+    <!--                        <img src="http://lorempixel.com/50/50/" alt="" />-->
+                            <img ng-src="img/{{item.partNo}}.png" height = "50px" width = "50px" alt="Photo of {{item.description}}">
+                            <span class="item-info">
+                                <span>{{item.partNo}}</span>
+    <!--                            <span>{{item.description}}</span>-->
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                    </span>
+                  </li>
+    <!--
+                  <li>
+                      <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                                <span>23$</span>
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                    </span>
+                  </li>
+    -->
+                   <li class="divider"></li>
+                  <li><a class="text-center" href="shoppingCart.html">View Cart</a></li>
+              </ul>
+            </li>
+
+
+    <!--                    -->
+
+
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!--
+        <div class="main" ng-controller = "MyController">
+          <ul class="artistlist">
+            <li class="artist cf" ng-repeat="item in options">
+              <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+              <div class="info">
+                <h2>{{item.partNo}}</h2>
+                <h3>{{item.description}}</h3>
+                <h3>{{item.required}}</h3>
+                  <h3>{{item.remarks}}</h3>
+                  <h3>{{item.nonSaleInd}}</h3>
+                  <h3>{{item.subParts}}</h3>
+                  <h3>{{item.leaf}}</h3>          
+              </div>
+            </li>
+          </ul>
+        </div>
+        -->
+
+    <!--
+            <h2>Option View</h2>
+          <p>The option view parts details.</p>  
+    -->
+          <div class="container">
+              <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                   <small>Shopping Cart</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Shopping Cart</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+              
+              
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="img/3103601.png" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+<!--                                <h4 class="media-heading"><a href="#">Product name</a></h4>-->
+<!--                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>-->
+                                  <h5 class="media-heading">  <a href="#">3103596</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                        <td class="col-md-1 actions" data-th="">
+                            
+<!--                        <td class="actions" data-th="">-->
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="img/3103596.png" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+<!--                                <h4 class="media-heading"><a href="#">Product name</a></h4>-->
+<!--                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>-->
+                                <h5 class="media-heading"> <a href="#">3103601</a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                        </td>
+                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
+                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
+                        <td class="col-md-1 actions" data-th="">
+                            
+<!--                        <td class="actions" data-th="">-->
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							</td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Subtotal</h5></td>
+                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Estimated shipping</h5></td>
+                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                        <a type="button" class="btn btn-default" href="http://143.222.33.39:4000/partsystems.html">
+                            <span class="glyphicon glyphicon-shopping-cart" ></span> Continue Shopping
+                        </a></td>
+                        <td>
+                        <a type="button" class="btn btn-success" href = "http://143.222.33.39:4000/shipment.html">
+                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+	
+	   
+	
+	
+</div>

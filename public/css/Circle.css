@@ -1,0 +1,54 @@
+body {
+ font-size: 18px;   
+}
+.orange-circle-button {
+	box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
+	border: .5em solid #E84D0E;
+	font-size: 1.5em;
+	line-height: 1.1em;
+	color: #ffffff;
+	background-color: #e84d0e;
+	margin: auto;
+	border-radius: 50%;
+	height: 5em;
+	width: 6em;
+	position: relative;
+}
+.orange-circle-button:hover {
+	color:#ffffff;
+    background-color: #00bfff;
+	text-decoration: none;
+	border-color: #00ccff;
+	
+}
+.orange-circle-button:visited {
+	color:#ffffff;
+    background-color: #e84d0e;
+	text-decoration: none;
+	
+}
+.orange-circle-link-greater-than {
+    font-size: 1em;
+}
+.text {
+    position: absolute;
+    top: 0;
+    color:#f00;
+    background-color:rgba(255,255,255,0.8);
+    width: 150px;
+    height: 120px;
+    line-height:100px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:1;
+	font-size:16px;
+	width: 200px;
+
+}

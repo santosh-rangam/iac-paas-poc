@@ -1,0 +1,48 @@
+[
+{
+"partNo": "3103596",
+"description": "Brace, Gear Housing",
+"required": null,
+"remarks": "",
+"nonSaleInd": "N",
+"subParts": null,
+"leaf": "true"
+}
+    ,
+{
+"partNo": "3103601",
+"description": "Spacer, Mounting",
+"required": "1",
+"remarks": "",
+"nonSaleInd": "N",
+"subParts": null,
+"leaf": "true"
+},
+{
+"partNo": "3902116",
+"description": "Screw, Hex Flange Head Cap",
+"required": "1",
+"remarks": "|M12 X 1.75 X 50.",
+"nonSaleInd": "N",
+"subParts": null,
+"leaf": "true"
+},
+{
+"partNo": "3903112",
+"description": "Screw, Hex Flange Head Cap",
+"required": "2",
+"remarks": "|M10 X 1.50 X 30.",
+"nonSaleInd": "N",
+"subParts": null,
+"leaf": "true"
+},
+{
+"partNo": "3910495",
+"description": "Screw, Hex Flange Head Cap",
+"required": "1",
+"remarks": "|M12 X 1.75 X 30.",
+"nonSaleInd": "N",
+"subParts": null,
+"leaf": "true"
+}
+]

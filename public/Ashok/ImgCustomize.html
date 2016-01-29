@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en" ng-app="demo">
+    <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Custom view Catalog</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/modern-business.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/Circle.css"/>
+	<link rel="stylesheet" type="text/css" href="css/customized.css"/> 
+	<link rel="stylesheet" type="text/css" href="css/dropdowns-enhancement.css"/>
+     
+ 	
+        <!-- Custom JS -->
+	
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/customView.js"></script>
+
+	<script type="text/javascript"  src="js/jquery.arctext.js"></script>
+	<script type="text/javascript" src="js/dropdowns-enhancement.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+
+<style>
+table, th, td {
+   	padding-bottom:20px;
+	padding-right:10px;
+	text-align:center;
+	//border: 1px solid;
+}
+
+
+table {
+
+    width: 80%;
+    margin-left: 70px;
+
+}
+</style>
+
+
+</head>
+<body ng-controller = "demoController">
+            <!-- Navigation -->
+  <ng-include src="'views/partials/navbar.html'"></ng-include>
+  
+<ul class="Circular" >
+	<li class="circle">
+		<a href="#" class="round green">
+			<!--<img  src = "img\QSX15-JohnDeere-Featured.jpg" height="75%" width="75%"/>-->
+			<img  src = "QSX15.jpg" height="75%" width="75%"/>
+			<span class="round">That's it,Click Here.</span>
+		</a>
+	</li>
+</ul>
+<div class="row" >
+<div class="container">
+	<div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Custom View 
+<!--                    <small>Subheading</small>-->
+                        </h1>
+                        <ol class="breadcrumb">
+                            <!--<li><a href="index.html">Home</a></li>-->
+							<li><a href="customizedOption.html">Home</a></li>
+                            <li class="active">Custom View</li>
+                        </ol>
+                    </div>
+                </div>
+	<div class="table-responsive">          
+  <table id="circularTable">
+    
+    <tbody>
+      <tr>
+    <th style="width:17%;"></th>
+    <th style="width:16%;"></th>
+    <th style="width:34%;">Click the buttons below to see the related parts.</th>
+	<th style="width:16%;"></th>
+    <th style="width:17%;"></th>
+  </tr>
+  <tr>
+    <td></td>
+	<td></td>
+    <td>
+	<div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button1" href="" onclick="show(1);">
+				Air Handling system
+			</button>-->
+			
+			<img class="img-circle image-circle1" src = "QSX15.jpg" height="30%" width="30%" />
+			<div class="text" style="margin-left: 60px;" onclick="show(1);">Air Handling system</div>
+            
+			
+			<span class="button1" style="display:none;"><h2>Air Handling system</h2>
+	<div class="list-group dropdown" style="margin-bottom:10px;">
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">INTAKE  
+						<span class="badge">5</span></a>
+						<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Arrangement Turbocharger</a></li>
+            <li><a href="partsCatalog.html">Air Intake Manifold</a></li>
+            <li class="divider"></li>
+            <li><a href="partsCatalog.html">Air Transfer Connection</a></li>
+			<li><a href="partsCatalog.html">Air Intake Connection</a></li>
+            <li><a href="partsCatalog.html">Plumbing Turbocharger</a></li>
+        </ul></div>
+	<div class="list-group dropdown"  style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Exhaust 
+						<span class="badge">2</span></a>
+						<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Exhaust Recirculation</a></li>
+            <li><a href="partsCatalog.html">Connection,Exhaust Outlet </a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">AFTERTREATMENT
+						<span class="badge">3</span></a>
+						<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">After Treatment Device</a></li>
+            <li><a href="partsCatalog.html">Doser Fluid </a></li>
+			<li><a href="partsCatalog.html"> Fluid Doser</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">COMPRESSOR AND PUMPS
+						<span class="badge">3</span></a>
+						<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Mounting, Ref compressor</a></li>
+            <li><a href="partsCatalog.html">Air Compressor </a></li>
+			<li><a href="partsCatalog.html">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+			</span>
+	
+        </div>   
+	</div>
+	</td>
+	<td></td>
+    <td></td>
+  </tr>
+    
+  <tr>
+  <td></td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button2" href="" onclick='show(2);'>
+			After Treatment
+			</button>-->
+
+			<img class="img-circle" src = "images/cummins-isx12-diesel.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(2);">After Treatment</div>
+			
+			<span class="button2" style="display:none;"><h2>After Treatment</h2>
+				 
+				<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">After Treatment Device
+						<span class="badge">0</span></a>
+						<!--<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="#">Mounting, Ref compressor</a></li>
+            <li><a href="#">Air Compressor </a></li>
+			<li><a href="#">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>-->
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">DOSER, FLUID
+						<span class="badge">0</span></a>
+						<!--<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="#">Mounting, Ref compressor</a></li>
+            <li><a href="#">Air Compressor </a></li>
+			<li><a href="#">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>-->
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Fluid Doser
+						<span class="badge">0</span></a>
+					<!--	<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="#">Mounting, Ref compressor</a></li>
+            <li><a href="#">Air Compressor </a></li>
+			<li><a href="#">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>-->
+	</div>
+				</span>
+        </div>   
+	</div></td>
+    <!--<td rowspan="4" ><img id="image" src="img/QSX15-JohnDeere-Featured.jpg" height="50%" width="50%"><!--</td>-->
+		<td rowspan="4" id="within"><img id="image" src="images/Cummins.jpg" height="50%" width="50%">
+		<div class="example ">
+					<h4 id="example1">CUMMINS ENGINE</h4>
+				</div>
+<script>$("#example1").css({
+               
+                fontSize:16+'px',
+				
+            }).arctext({radius: 100, dir: -1});
+</script>
+			<div id="internal">
+
+			</div>
+		
+		</td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button3" href="" onclick='show(3);'>
+			Base Engine
+			</button>-->
+			<img class="img-circle" src = "QSX15.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(3);">Base Engine</div>
+			<span class="button3" style="display:none;"><h2>Base Engine</h2>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Cam followers and tappets
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Lever , Rocker</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Cylinder Block
+						<span class="badge">8</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Accessory Support</a></li>
+            <li><a href="partsCatalog.html">Block , cylinder </a></li>
+			<li><a href="partsCatalog.html">CrankShaft</a></li>
+			<li><a href="partsCatalog.html">Cus Accessory Brace</a></li>
+            <li><a href="partsCatalog.html">Cylinder Liner Kit</a></li>
+			<li><a href="partsCatalog.html">Gear Housing Sensor Adapter </a></li>
+			<li><a href="partsCatalog.html">Gear Housing/Idler Gears</a></li>
+            <li><a href="partsCatalog.html">Cover, Front Gear </a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Engine Product Mounting
+						<span class="badge">3</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Front Engine Support</a></li>
+            <li><a href="partsCatalog.html">Lifting Arrangement</a></li>
+			<li><a href="partsCatalog.html">Lifting Bracket Mounting</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown"> Gasket sets and Kits
+						<span class="badge">1</span></a>
+				<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Set, Lower Engine Gasket</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Inertia system and Drives
+						<span class="badge">4</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Vibration Damper</a></li>
+            <li><a href="partsCatalog.html">Fly wheel </a></li>
+			<li><a href="partsCatalog.html">Fly Wheel Mounting </a></li>
+						<li><a href="partsCatalog.html">Fly Wheel Housing </a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Miscellaneous
+						<span class="badge">3</span></a>
+				<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Paint</a></li>
+            <li><a href="partsCatalog.html">Name Plate</a></li>
+			<li><a href="partsCatalog.html">Approval Agency</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Performance and parts
+						<span class="badge">8</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Camshaft</a></li>
+            <li><a href="partsCatalog.html">Cylinder Head </a></li>
+			<li><a href="partsCatalog.html">Injector</a></li>
+			<li><a href="partsCatalog.html">Turbocharger</a></li>
+            <li><a href="partsCatalog.html">Injector Plumbing</a></li>
+			<li><a href="partsCatalog.html">Connecting Rod and Piston</a></li>
+			<li><a href="partsCatalog.html">Piston Cooling Nozzle</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+				 
+					
+				  </ul>
+				</span>
+	
+        </div>   
+	</div></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button4" href="" onclick='show(4);'>
+			Cooling System</button>-->
+			<img class="img-circle" src = "images/ANSYScumminsTurbo1.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(4);">Cooling System</div>
+			<span class="button4" style="display:none;"><h2>Cooling System</h2>
+			<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Engine
+						<span class="badge">6</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Corrosion Resistor</a></li>
+            <li><a href="partsCatalog.html">Pump Water</a></li>
+			<li><a href="partsCatalog.html">Connection, Water Inlet</a></li>
+			<li><a href="partsCatalog.html">Connection, Water Outlet</a></li>
+            <li><a href="partsCatalog.html">Thermostat Housing</a></li>
+			<li><a href="partsCatalog.html">Thermostat</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Accessories
+						<span class="badge">5</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Cabin, Heater Plumbing</a></li>
+            <li><a href="partsCatalog.html">Aid ,COO Heater Starting</a></li>
+			<li><a href="partsCatalog.html">Drive Fan</a></li>
+			<li><a href="partsCatalog.html">Belt , Fan Drive</a></li>
+            <li><a href="partsCatalog.html">Plumbing Radiator</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+				</span>
+	
+        </div>   
+	</div></td>
+	<td></td>
+	<td></td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button5" href="" onclick='show(5);'>
+			Electrics</button>-->
+			<img class="img-circle"  src = "engine_spartan.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(5);">Electrics</div>
+			<span class="button5" style="display:none;"><h2>Electrics</h2>
+				 
+				  <div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="partsCatalog.html" class="list-group-item">Alternator Mounting
+						<span class="badge">0</span></a>
+					<!--	<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="#">Mounting, Ref compressor</a></li>
+            <li><a href="#">Air Compressor </a></li>
+			<li><a href="#">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>-->
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="partsCatalog.html" class="list-group-item">Mounting, Starting Motor
+						<span class="badge">0</span></a>
+					<!--	<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="#">Mounting, Ref compressor</a></li>
+            <li><a href="#">Air Compressor </a></li>
+			<li><a href="#">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>-->
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="partsCatalog.html" class="list-group-item">Motor, Starting
+						<span class="badge">0</span></a>
+					<!--	<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="#">Mounting, Ref compressor</a></li>
+            <li><a href="#">Air Compressor </a></li>
+			<li><a href="#">Air Cpr Inlet Arrangementg </a></li>
+            <li class="divider"></li>
+        </ul>-->
+	</div>
+				</span>
+	
+        </div>   
+	</div></td>
+  </tr>
+  <tr>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button6" href="" onclick='show(6);'>
+			Electronic control system</button>-->
+			
+			<img class="img-circle" src = "images/engine0904.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(6);">Electronic control system</div>
+			<span class="button6" style="display:none;"><h2>Electronic control <br>system</h2>
+				 <div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Electronic Management system
+						<span class="badge">4</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Software, Cus Interface</a></li>
+            <li><a href="partsCatalog.html">Software, Calibration</a></li>
+			<li><a href="partsCatalog.html">Engine Control Module</a></li>
+			<li><a href="partsCatalog.html">Wiring Accessories</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Instrumentation and control
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Engine Brake</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+				 
+				</span>
+	
+        </div>   
+	</div></td>
+	<td></td>
+	<td></td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button7" href="" onclick='show(7);'>
+			Filters</button>-->
+			<img class="img-circle"  src = "QSX15.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(7);">Filters</div>
+			<span class="button7" style="display:none;"><h2>Filters</h2>
+				<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Oil Filter
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Filter , Full Flow Oil</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Fuel Filter
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Filter Fuel</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Coolant Filter
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Corrosion Resistor</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Crankcase Filter
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Breather Crankcase</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+				</span>
+	
+        </div>   
+	</div></td>
+  </tr>
+  <tr>
+  <td></td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button8" href="" onclick='show(8);'>
+			Fuel System</button>-->
+			<img class="img-circle" src = "QSX15.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(8);">Fuel System</div>
+			<span class="button8" style="display:none;"><h2>Fuel system</h2>
+				<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown"> Delivery System
+						<span class="badge">3</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Fuel Pump</a></li>
+			<li><a href="partsCatalog.html">Fuel Drain Plumbing</a></li>
+			<li><a href="partsCatalog.html">Filter Fuel</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Accessories
+						<span class="badge">1</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Fuel System Primer</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+	<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Miscellaneous
+						<span class="badge">2</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Rating Fuel</a></li>
+			<li><a href="partsCatalog.html">Calibration, Fuel Pump</a></li>
+           
+            <li class="divider"></li>
+        </ul>
+	</div>
+				</span>
+	
+        </div>   
+	</div></td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <!--<button class="btn-sm btn-default orange-circle-button" id="button9" href="" onclick='show(9);'>
+			Lubrication System</button>-->
+			<img class="img-circle" src = "QSX15.jpg" height="70%" width="70%" />
+			<div class="text" onclick="show(9);">Lubrication System</div>
+			<span class="button9" style="display:none;"><h2>Lubrication System</h2>
+				<div class="list-group dropdown" style="margin-bottom:10px;">	
+    <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Engine
+						<span class="badge">8</span></a>
+					<ul class="dropdown-menu bullet pull-middle pull-center">
+            <li><a href="partsCatalog.html">Engine Oil Cooler</a></li>
+            <li><a href="partsCatalog.html">Breather , Crankcase </a></li>
+			<li><a href="partsCatalog.html">Lubrication Oil Pump</a></li>
+			<li><a href="partsCatalog.html">Oil Pan</a></li>
+            <li><a href="partsCatalog.html">Arrangement Oil Fill</a></li>
+			<li><a href="partsCatalog.html">Gauge Oil Level </a></li>
+			<li><a href="partsCatalog.html">Cover Valve</a></li>
+            <li><a href="partsCatalog.html">Filter Full Flow Oil</a></li>
+            <li class="divider"></li>
+        </ul>
+	</div>
+				</span>
+	
+        </div>   
+	</div></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td></td>
+	<td></td>
+    <td><div class="row">
+        <div class="col-lg-12">
+		    <button class="btn-sm btn-default orange-circle-button" id="button10" href="" onclick='show(10);'>
+			<span class="button10">Read<br />more<br />
+				<span class="orange-circle-greater-than">>
+				</span>
+			</span>
+			</button>
+	
+        </div>   
+	</div></td>
+    <td></td>
+	<td></td>
+  </tr>
+    </tbody>
+  </table>
+</div>
+<div></div>
+</div>
+</div>
+
+
+</body>
+
+<footer>
+<div class="row">
+<div class="col-lg-12">
+<label>Copyright © Cummins 2015</label>
+</div>
+</div>
+</footer>
+</html>

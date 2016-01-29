@@ -1,0 +1,10 @@
+{
+"data": [
+	{"title": "About", "url": "/about"},
+	{"title": "Contact", "url": "/contact"},
+	{"title": "Faq", "url": "/faq"},
+	{"title": "Index", "url": "/index"},
+	{"title": "Pricing", "url": "/pricing"},
+	{"title": "Services", "url": "/sservices"},
+	{"title": "Sidebar", "url": "/sidebar"}	
+]}
