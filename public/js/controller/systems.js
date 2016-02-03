@@ -14,7 +14,9 @@
 var myApp = angular.module('myApp', ['jsTree.directive']);
 
 
-var url = "http://fspqs44.fs.cummins.com:8080/QuickServeMobile/iac/catalog/optionsList.json?engineSerialNumber=79393426&esnType=NORMAL&Token=123456789&callBack=JSON_CALLBACK";
+//var url = "http://fspqs44.fs.cummins.com:8080/QuickServeMobile/iac/catalog/optionsList.json?engineSerialNumber=79393426&esnType=NORMAL&Token=123456789&callBack=JSON_CALLBACK";
+
+var url = "http://143.222.33.39:8080/QuickServeMobile/iac/catalog/optionsList.json?engineSerialNumber=79393426&esnType=NORMAL&Token=123456789&callBack=JSON_CALLBACK";
 
 myApp.controller("TreeDemoCtrl", ['$scope', '$http', function($scope, $http) {
 var cnt = 0;
