@@ -11,10 +11,10 @@
 var myApp = angular.module('myApp', []);
 
 
-var url = "http://fspqs44.fs.cummins.com:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode=82&filmCard=SS&specGroup=16.04.1&optionNumber=BB1885&Token=123456789&callBack=JSON_CALLBACK";
+//var url = "http://fspqs44.fs.cummins.com:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode=82&filmCard=SS&specGroup=16.04.1&optionNumber=BB1885&Token=123456789&callBack=JSON_CALLBACK";
 
 
-//var url = "http://143.222.33.39:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode=82&filmCard=SS&specGroup=16.04.1&optionNumber=BB1885&Token=123456789&callBack=JSON_CALLBACK";
+var url = "http://143.222.33.39:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode=82&filmCard=SS&specGroup=16.04.1&optionNumber=BB1885&Token=123456789&callBack=JSON_CALLBACK";
 
 //var url = "http://fspqs44.fs.cummins.com:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode=82&filmCard=SS&specGroup=16.04.1&optionNumber=BB1885&Token=123456789&callBack=JSON_CALLBACK";
 
