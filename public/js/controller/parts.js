@@ -32,7 +32,7 @@ console.log(loc);
 		console.log(film);
 		console.log(spec);
 		console.log(plant);
-		url="http://fspqs44.fs.cummins.com:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode="+plant+"&filmCard="+film+"&specGroup="+spec+"&optionNumber="+opt+"&Token=123456789&callBack=JSON_CALLBACK";
+		url="http://143.222.33.39:8080/QuickServeMobile/iac/catalog/optionDetails.json?plantCode="+plant+"&filmCard="+film+"&specGroup="+spec+"&optionNumber="+opt+"&Token=123456789&callBack=JSON_CALLBACK";
 	}
  $http.jsonp(url)
     .success(function(data){
